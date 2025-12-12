@@ -1,0 +1,47 @@
+/* Reusable Pushable Button (single class version) */
+.pushable {
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+    background: hsl(248, 53%, 58%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    /* 3D effect base */
+    box-shadow:
+        0 4px 0 hsl(248, 39%, 39%),   /* dark bottom edge */
+        0 6px 10px rgba(0,0,0,0.3);   /* shadow */
+    
+    transition:
+        transform 0.25s cubic-bezier(0.3, 0.7, 0.4, 1),
+        box-shadow 0.25s cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Hover lift */
+.pushable:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 6px 0 hsl(248, 39%, 39%),
+        0 12px 15px rgba(0,0,0,0.35);
+}
+
+/* Pressed state */
+.pushable:active {
+    transform: translateY(-1px);
+    box-shadow:
+        0 2px 0 hsl(248, 39%, 39%),
+        0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Focus outline */
+.pushable:focus {
+    outline: 2px solid deeppink;
+    outline-offset: 4px;
+}

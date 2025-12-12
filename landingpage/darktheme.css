@@ -1,0 +1,110 @@
+.space-bg {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #02030a;
+}
+
+.space-bg .space-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #0d1e31 0%, #000000 100%);
+}
+
+.space-bg .stars-small,
+.space-bg .stars-medium,
+.space-bg .stars-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: transparent;
+}
+
+/* Small stars */
+.space-bg .stars-small {
+    width: 1px;
+    height: 1px;
+    box-shadow:
+        10vw 10vh #FFF, 20vw 80vh #FFF, 50vw 50vh #FFF, 80vw 10vh #FFF, 90vw 90vh #FFF,
+        15vw 45vh #FFF, 35vw 25vh #FFF, 65vw 15vh #FFF, 85vw 35vh #FFF, 95vw 75vh #FFF,
+        5vw 95vh #FFF, 25vw 55vh #FFF, 45vw 85vh #FFF, 75vw 65vh #FFF, 55vw 5vh #FFF,
+        12vw 32vh #FFF, 42vw 12vh #FFF, 72vw 92vh #FFF, 92vw 42vh #FFF, 22vw 62vh #FFF,
+        30vw 30vh #FFF, 60vw 60vh #FFF, 40vw 90vh #FFF;
+    opacity: 0.6;
+    animation: twinkle 4s infinite alternate;
+}
+
+/* Medium stars */
+.space-bg .stars-medium {
+    width: 2px;
+    height: 2px;
+    box-shadow:
+        15vw 15vh #FFF, 45vw 85vh #FFF, 75vw 35vh #FFF, 85vw 75vh #FFF,
+        25vw 65vh #FFF, 55vw 25vh #FFF, 95vw 15vh #FFF, 5vw 55vh #FFF,
+        50vw 10vh #FFF, 10vw 90vh #FFF;
+    opacity: 0.8;
+    animation: twinkle 6s infinite alternate;
+}
+
+/* Large stars */
+.space-bg .stars-large {
+    width: 3px;
+    height: 3px;
+    box-shadow:
+        20vw 20vh #FFF, 80vw 80vh #FFF, 50vw 50vh #FFF;
+    opacity: 1;
+    filter: drop-shadow(0 0 3px white);
+    animation: twinkle 8s infinite alternate;
+}
+
+/* Nebula (center galaxy) */
+.space-bg .nebula {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 40vh;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    background-image:
+        radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 40%),
+        radial-gradient(circle at center, rgba(135, 206, 235, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at center, rgba(75, 0, 130, 0.3) 20%, transparent 70%);
+    filter: blur(30px);
+    opacity: 0.9;
+    border-radius: 50%;
+}
+
+.space-bg .nebula::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    filter: blur(10px);
+    mix-blend-mode: overlay;
+}
+
+/* Bottom fog */
+.space-bg .bottom-fog {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to top, rgba(26, 21, 56, 0.8), transparent);
+    filter: blur(40px);
+    opacity: 0.7;
+}
+
+/* Twinkle animation */
+@keyframes twinkle {
+    0% { opacity: 0.4; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
