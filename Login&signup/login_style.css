@@ -1,0 +1,49 @@
+.form-container {
+  width: 300px;           /* FIX: limits the width */
+  margin: 100px auto;     /* FIX: centers the box */
+  padding: 20px;          /* inside spacing */
+  background: var(--bg);  /* theme friendly */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Inputs stacked vertically */
+.input-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  box-sizing: border-box;   /* <-- FIXES the overflow */
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+
+/* Buttons side by side */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#form-title {
+  text-align: center;
+  margin: 0 0 15px 0; /* top 0, bottom 15px */
+  color: var(--text);
+  font-size: 24px;    /* optional: adjust size */
+}
+
+#log {
+  margin-top: 15px;
+  min-height: 20px;  /* keeps layout from jumping */
+  color: red;        /* default text color */
+  text-align: center;
+  font-size: 14px;
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_style.css">
+    <title>Login/Signup</title>
+</head>
+<body>
+<div class="form-container">
+
+  <h2 id="form-title">Login</h2>
+
+  <form id="user-form">
+    <div class="input-group">
+      <input id="username" type="text" placeholder="Username" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <input id="confirm-password" type="password" placeholder="Confirm Password" style="display:none;">
+    </div>
+
+    <!-- Left = toggle mode, Right = submit -->
+    <div class="button-group">
+      <button type="button" id="mode-btn">Switch to Signup</button>
+      <button type="button" id="submit-btn">Login</button>
+    </div>
+
+    <div id="log"></div>
+  </form>
+</div>
+
+<script src="login_logic.js"></script>
+</body>
+</html>
