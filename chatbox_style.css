@@ -1,0 +1,60 @@
+#submit_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;       /* circle */
+  border: none;
+  background-color: #1b1edf;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;  /* horizontal center of > */
+  align-items: center;      /* vertical center of > */
+  padding: 0;
+}
+
+#submit_button:hover {
+  background-color: #45a049;
+}
+
+#chatbox_div {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;            /* horizontal layout */
+  align-items: center;      /* vertical center */
+  gap: 10px;
+
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+#chatInput {
+  flex: 1;               /* takes remaining space */
+  padding: 10px;
+  font-size: 16px;
+}
+
+#chatForm {
+  display: flex;
+  align-items: center;   /* vertical centering */
+  gap: 10px;             /* spacing between input and button */
+}
+
+#chatHistory {
+  width: 600px;                    /* fixed width */
+  max-height: calc(100vh - 80px);  /* extend to just above bottom input area */
+  margin: 0 auto;                  /* center horizontally */
+  border: 1px solid black;         /* visible border */
+  padding: 10px;
+  overflow-y: auto;                /* vertical scroll */
+  overflow-x: hidden;              /* hide horizontal scroll */
+  background-color: #f9f9f9;
+}
+
+
